@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'splash_page.dart';
+import 'sign_up_page.dart';
 import 'package:toko_online/theme.dart';
 
 class SignInPage extends StatelessWidget {
@@ -174,11 +175,16 @@ class SignInPage extends StatelessWidget {
                 fontSize: 12,
               ),
             ),
-            Text(
-              'Sign Up',
-              style: purpleTextStyle.copyWith(
-                fontSize: 12,
-                fontWeight: medium
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/sign-up');
+              },
+              child: Text(
+                'Sign Up',
+                style: purpleTextStyle.copyWith(
+                  fontSize: 12,
+                  fontWeight: medium
+                ),
               ),
             ),
           ],
